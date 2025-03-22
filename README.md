@@ -46,4 +46,4 @@ Este projeto consiste em um portfólio pessoal online, desenvolvido para apresen
 
 [andreluiswenningkamp52@gmail.com](mailto:andreluiswenningkamp52@gmail.com)
 
-[Seu GitHub](https://github.com/andreluisw059/)
+[andreluisw059](https://github.com/andreluisw059/)
