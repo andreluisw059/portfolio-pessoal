@@ -1,0 +1,101 @@
+:root {
+  --areas: "header header header" "main main main" "aside aside aside" "footer footer footer";
+  --menu-color: #2b2d42;
+  --bg-color: #edf2f4;
+  --main-color: #8d99ae;
+}
+
+
+body {
+  background-color: var(--bg-color);
+}
+
+.container {
+  display: grid;
+  grid-template-areas: var(--areas);
+}
+
+header {
+  grid-area: header;
+  background-color: var(--menu-color);
+}
+
+main {
+  background-color: var(--main-color);
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: white;
+  text-indent: 30px;
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+main h2 {
+  font-size: 2rem;
+}
+
+aside {
+  grid-area: aside;
+  background-color: grey;
+  color: white;
+  font-size: 1.3rem;
+  padding: 50px 50px 50px 50px;
+}
+
+footer {
+  background-color: var(--menu-color);
+  grid-area: footer;
+  padding: 20px;
+  color: white;
+}
+
+
+nav ol {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-height: 50px;
+  align-items: center;
+}
+
+nav ol li a{
+  color: white;
+}
+
+
+main ol {
+  list-style-type: space-counter;
+}
+
+i {
+  margin: 10px;
+  color: white;
+}
+
+@media screen and (min-width: 768px){
+  .container {
+    grid-template-areas: "header header header" "aside main main" " footer footer footer";
+
+  }
+
+  aside {
+    width: 400px;
+  }
+
+  main {
+    gap: 30px;
+  }
+
+  main img {
+    margin-top: 20px;
+  }
+
+  main p {
+    width: 50%;
+    margin: auto;
+  }
+}
+
+
