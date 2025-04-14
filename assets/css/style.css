@@ -27,9 +27,6 @@ header div {
   flex-direction: column;
   flex-wrap: wrap;
 }
-.resume {
-  background-color: #dcdcdc;
-}
 
 header p {
   align-self: center;
@@ -86,6 +83,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  font-size: 1.1rem;
 }
 
 section h1 {
@@ -110,6 +108,7 @@ section h1 {
 
 .fundo-cinza { 
   background-color: gray;
+  color: white;
 }
 
 .reviews {
@@ -204,7 +203,6 @@ footer {
     animation-duration: 1.3s;
     animation-name: slidein;
     flex-direction: column;
-    grid-area: section;
     height: 700px;
     width: 70%;
     justify-content: start;
@@ -213,6 +211,7 @@ footer {
   section p {
   width: 70%;
   margin: auto;
+
   }
 
   .reviews {
