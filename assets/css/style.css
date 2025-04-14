@@ -140,7 +140,7 @@ footer {
 }
 
 
-@media screen and (min-width:375px) {
+@media screen and (min-width:996px) {
   .container {
     gap: 0;
   }
