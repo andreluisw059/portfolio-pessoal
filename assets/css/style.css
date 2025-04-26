@@ -72,7 +72,7 @@ footer {
 
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 960px) {
   .container {
     grid-template-rows: 35px 650px 300px;
     place-items: center;
