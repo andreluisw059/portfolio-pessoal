@@ -1,272 +1,171 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Special+Gothic&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Special Gothic", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
+  color: #EFF1F3;
 }
 
-h1#nome {
-  font-size: 1em;
-  font-weight: normal;
-  align-self: center;
-  text-align: center;
+body {
+  background: #5a5369;
+  background: linear-gradient(0deg, #272727 54%, #bf0603 54%, rgba(253, 54, 36, 1) 100%, rgba(252, 176, 69, 1) 100%);
+  background-attachment: fixed;
 }
 
-header img {
-  width: 150px;
-  border-radius: 50%;
-  height: 150px;
-  align-self: center;
-}
-
-header div {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-
-header p {
-  align-self: center;
-  font-style: italic;
-  font-weight: lighter;
-  font-size: 0.8em;
+:root {
+  --menu-text:  #EFF1F3;
 }
 
 .container {
+  display: grid;
+  grid-template-areas: "header header header" "main main main";
+  grid-template-rows: 10px 600px 150px;
+}
+
+.container header {
+  position: fixed;
+  top: 0;
+  grid-area: header;
+  height: 30px;
+  width: 100vw;
+}
+
+.container header ol {
   display: flex;
-  flex-direction: column;
-  gap: 70px;
+  justify-content: center;
+  gap: 2px;
 }
 
-header,
-header ol {
- display: flex;
- list-style-type: none;
- flex-wrap:wrap;
- justify-content: center;
- gap: 20px;
+.container header ol li {
+  list-style-type: none;
 }
 
-header {
-  flex-direction: column;
-  gap: 10px;
-}
-
-header ol li a {
-  text-decoration: none;
-  color: black;
-}
-
-header ol li:hover a {
-  text-decoration: none;
-  color: black;
+.container header ol li a {
   padding: 10px;
-  background-color: white;
+  color: var(--menu-text);
+  padding: 20px;
+  text-decoration: none;
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(1, 90vw);
+  justify-content: center;
   gap: 15px;
 }
 
-main section img {
-  width: 95vw;
-  
-}
-
-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 1.1rem;
-}
-
-section h1 {
+main h1,
+p, 
+h2  {
   text-align: center;
-}
-
-.secao-projetos {
-  display:flex;
-  flex-direction: column;
-}
-
-#projetos {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-.projeto {
-  margin-top: 20px;
-  
-}
-
-.fundo-cinza { 
-  background-color: gray;
   color: white;
+  animation: slidein 1.3s;
 }
 
-.reviews {
-  display: flex;
-  flex-wrap: wrap ;
-  width: 100vw;
-  justify-content: center;
-  gap: 10px;
-}
-
-.review {
-  background-color: #dcdcdc;
-  border-radius: 15px;
-  width: 50%;
-  padding: 10px;
-}
-
-.review p {
-  font-size: 1em;
-}
-
-
-footer {
-  background-color: black;
-  width: 99.2vw;
-  height: 100px;
-  color: white;
-  text-align: center;
-}
-
-
-@media screen and (min-width:996px) {
-  .container {
-    gap: 0;
-  }
-  header {
-    position: fixed;
-    top: 0;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    color: white;
-    height: 70px;
-    width: 99.2vw;
-  }
-
-  header div {
-    flex-direction: row;
-  }
-
-  header ol li  a { 
-    color: white;
-
-  }
-  
-  .resume {
-    text-align: center;
-    height: 150px;
-    width: 99.2vw;
-    margin: 50px auto;
-  }
-
-  header img {
-    height: 70px;
-    width: 70px;
-  }
-
-  header div {
-    display: flex;
-    gap: 30px;
-    flex-wrap:wrap;
-  }
-  
-  main {
-    display: grid;
-    grid-template-areas: "div div div" "section section section";
-    grid-template-columns: repeat(3, 33.3vw);
-    gap: 0;
-  }
-
-  main section img {
-    width:100%;
-   }
-  
-  main .resume {
-    grid-area: div;
-  }
-
-  section {
-    animation-duration: 1.3s;
-    animation-name: slidein;
-    flex-direction: column;
-    height: 700px;
-    width: 70%;
-    justify-content: start;
-  }
-
-  section p {
-  width: 70%;
+main img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
   margin: auto;
+}
+
+
+
+@media screen and (min-width: 960px) {
+  body {
+    background: linear-gradient(35deg, #272727 54%, #bf0603 54%, rgba(253, 54, 36, 1) 100%, rgba(252, 176, 69, 1) 100%);
+  background-attachment: fixed;
+  }
+  
+  .container {
+    grid-template-rows: 35px 800px 80px;
 
   }
-
-  .reviews {
-    display: grid;
-    grid-template-columns: repeat(3, 25vw);
-    justify-items: center;
+  .container header {
+    height: 50px;
+    border-radius: 10px;
   }
 
-  .review p {
+  main img {
+
+    border-radius: 40%;
+    width: 500px;
+    height: 500px;
+  }
+
+  main img:hover {
+    animation: img 1.5s;
+    width: 700px;
+    height: 700px;
+  }
+
+  main {
+    align-items: center;
+    grid-template-columns: repeat(2, 500px);
+  }
+
+  main #resume:hover {
+    animation: resumeSize 1.2s;
+    font-size: 1.3rem;
+  }
+
+  li:hover a:hover {
+    background: white;
+    color: black;
+  }
+
+  li  {
+    display: flex;
+  }
+
+  blockquote {
     width: 90%;
+  }
+
+  blockquote p {
+    font-style: italic;
+    font-size: 1.2rem;
     
   }
 
-  .review {
-    margin: 40px 20px 0px 0px;
-  }
-
-  h2 {
-    font-size: 2.3em;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  div.reviews {
-    width: 50%;
-    margin: auto;
-  }
-
-  .full {
-    width: 99.2vw;
-    height: 800px;
-  }
-
-  div#projetos {
-    align-self: center;
-  }
-
-  h1 {
-    font-size: 30px;
-  }
-
-  .resume {
-    font-size: 1.4em;
-  }
-
-
 }
 
 
-@keyframes slidein{
+@keyframes slidein {
   from {
-    margin-left: 60%;
+    margin-right: 300px;
   }
 
   to {
-    margin-left: 0%;
+    margin-right: 0px;
+  }
+}
+
+@keyframes img{ 
+  from {
+    width: 500px;
+    height: 500px;
+  }
+
+  to {
+    width: 700px;
+    height: 700px;
+  }
+}
+
+@keyframes resumeSize{ 
+  from {
+    font-size: 1rem;
+  }
+
+  to {
+   
+    font-size: 1.3rem;
+
   }
 }

@@ -1,0 +1,53 @@
+main form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main form label {
+  color: white;
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main form label span {
+  width: 150px;
+}
+
+main form input
+,textarea {
+  width: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
+main form input {
+  height: 40px;
+  color: black;
+  font-size: 1.2rem;
+}
+
+main form textarea {
+  height: 40px;
+  color: black;
+  font-size: 1.2rem;
+}
+
+main form input[type=button] {
+  color: black;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+
+@media screen and (min-width: 996px){
+  main {
+    grid-template-columns: repeat(1, 90vw);
+  }
+}
